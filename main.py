@@ -1,26 +1,35 @@
-def assignment1():
-    print("Assignment 1 completed")
+from course import Course
+from student import Student
 
-def assignment2():
-    print("Assignment 2 completed")
+math = Course("Algebra 1")
+language = Course("Spanish 1")
+science = Course("Earth Science")
+history = Course("U.S History 1")
+phys_ed = Course("Physical Education 1")
+engineering = Course("Introduction to engineering")
+comp_sci = Course("Computer Science E")
 
-def execute_assignment(assignment_number):
-    if assignment_number == 1:
-        assignment1()
-    elif assignment_number == 2:
-        result = assignment2()
-        print(result)
-    else:
-        print("Invalid assignment number")
+test_student = Student("Wylie","Sample")
+test_student.add_course(math)
+test_student.add_course(language)
+test_student.add_course(science)
+test_student.add_course(history)
 
-while True:
-    user_input = input("Enter assignment number (1 or 2) or 'exit' to quit: ")
-    if user_input.lower() == 'exit':
-        print("Exiting the program.")
-        break
+test_student2 = Student("Jackson", "Sample")
+test_student2.add_course(math)
+test_student2.add_course(science)
+test_student2.add_course(phys_ed)
+test_student2.add_course(history)
 
-    if user_input.isdigit():
-        assignment_number = int(user_input)
-        execute_assignment(assignment_number)    
-    else:
-        print("Please enter a valid assignment number or 'exit' to quit.")
+test_student3 = Student("Alex", "Johnson")
+test_student3.add_course(math)
+test_student3.add_course(language)
+test_student3.add_course(engineering)
+test_student3.add_course(comp_sci)
+
+student_list = [test_student,test_student2,test_student3]
+
+print("Students:\n")
+
+for students in student_list:
+    print(students)

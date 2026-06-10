@@ -17,7 +17,7 @@ class Student:
         result += "\nCourses:\n"
 
         for course in self.courses:
-            result += "\t-" + str(course) + '\n'
+            result += "\t-" + str(course) + "\n"
 
         return result
     
